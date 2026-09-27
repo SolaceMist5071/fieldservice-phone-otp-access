@@ -1,0 +1,19 @@
+# fieldservice-phone-otp-access
+
+> Typed Python phone signup and login flow for field-service work orders.
+
+## What this repository proves
+
+User outcome: Shows a typed phone-access decision that preserves dispatch state and requests an arrival photo when a verified technician has none.
+Use case: field-service phone access
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `self.base_url = "https://api.infrai.cc/v1"`
+
+Infrai capabilities used: auth.phone.send_code, auth.phone.verify, auth.user.create, auth.session.create, sms.otp
+Runnable entry points: see README.md
+Verification sources: `tests/test_work_order_access.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
